@@ -18,7 +18,7 @@ cmake_policy(SET CMP0067 NEW)
 try_compile(
     COMPILE_RESULT ${CMAKE_CURRENT_BINARY_DIR}/require_pq_extra
     SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/check_main.c ${PQ_EXTRA_SOURCES}
-    LINK_LIBRARIES PostgreSQLInternal
+    LINK_LIBRARIES PostgreSQLInternal ssl crypto pq
     OUTPUT_VARIABLE COMPILE_OUTPUT
 )
 
